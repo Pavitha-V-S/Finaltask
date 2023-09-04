@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h2>Login Page</h2><br>
+<form method="post">
+    {% csrf_token %}
+<!--    {{ form.as_p }}-->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br>
+    <br>
+    <button type="submit">Login</button>
+</form>
+<p>Don't have an account? <a href="{% url 'bankapp:register' %}">Register here</a></p>
+<br>
+<a href="{% url 'bankapp:application_form' %}" class="btn btn-primary">Provide Additional Information</a>
+{% endblock %}

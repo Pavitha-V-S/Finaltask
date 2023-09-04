@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+  <h2>Logout</h2>
+  <p><center>You have been successfully logged out.</center></p><br>
+  <a href="{% url 'bankapp:home' %}" class="btn btn-primary">Return to Home</a>
+</div>
+{% endblock %}
